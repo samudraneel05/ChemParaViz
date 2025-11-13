@@ -1,0 +1,121 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.auth-card {
+  background: var(--color-surface);
+  padding: 48px;
+  border-radius: 2px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-card h1 {
+  color: var(--color-text-primary);
+  text-align: left;
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.auth-card h2 {
+  color: var(--color-text-secondary);
+  text-align: left;
+  margin: 0 0 32px 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  transition: all 0.15s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-text-primary);
+  box-shadow: 0 0 0 1px var(--color-text-primary);
+}
+
+.form-group input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 11px 16px;
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-top: 8px;
+  letter-spacing: -0.01em;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+}
+
+.btn-primary:active {
+  transform: scale(0.99);
+}
+
+.error-message {
+  background: #fef2f2;
+  color: var(--color-error);
+  padding: 12px 14px;
+  border-radius: 2px;
+  border: 1px solid #fecaca;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.toggle-auth {
+  text-align: center;
+  margin-top: 24px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.toggle-auth span {
+  color: var(--color-text-primary);
+  cursor: pointer;
+  font-weight: 500;
+  border-bottom: 1px solid var(--color-text-primary);
+  transition: opacity 0.15s ease;
+}
+
+.toggle-auth span:hover {
+  opacity: 0.7;
+}
