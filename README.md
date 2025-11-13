@@ -319,15 +319,6 @@ gunicorn chemparaviz.wsgi:application --bind 0.0.0.0:8000
 - **[API_DOCUMENTATION.md](API_DOCUMENTATION.md)** - Complete API reference with examples
 - **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Architecture and design overview
 
-## About This Project
-
-Built as a technical screening task to demonstrate:
-- Full-stack development (Django + React + PyQt5)
-- RESTful API design and implementation
-- Data processing with Pandas
-- Professional UI/UX design
-- Cross-platform development
-- Clean, maintainable code
 
 ## Support
 
