@@ -6,6 +6,7 @@ from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.http import HttpResponse
+from django.shortcuts import render
 from .models import Dataset, Equipment
 from .serializers import (
     DatasetSerializer, 
@@ -15,6 +16,11 @@ from .serializers import (
 )
 from .utils import process_csv, get_dataset_summary
 from .pdf_generator import generate_pdf_report
+
+
+def index(request):
+    """Landing page"""
+    return render(request, 'index.html')
 
 
 @api_view(['POST'])
