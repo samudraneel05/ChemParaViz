@@ -2,9 +2,7 @@
   min-height: 100vh;
   background: var(--color-bg);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
+  flex-direction: column;
 }
 
 .landing-content {
@@ -14,6 +12,10 @@
   grid-template-columns: 5fr 7fr;
   gap: 80px;
   align-items: center;
+  margin: 0 auto;
+  padding: 60px 32px;
+  flex: 1;
+  align-content: center;
 }
 
 /* Left Side - Content */

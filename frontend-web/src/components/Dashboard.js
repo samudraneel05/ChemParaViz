@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../contexts/AuthContext';
 import { datasetAPI } from '../services/api';
+import Header from './Header';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title, PointElement, LineElement } from 'chart.js';
 import { Pie, Bar, Line, Scatter } from 'react-chartjs-2';
 import { BoxPlotController, BoxAndWiskers } from '@sgratzl/chartjs-chart-boxplot';
@@ -9,7 +9,6 @@ import './Dashboard.css';
 ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title, PointElement, LineElement, BoxPlotController, BoxAndWiskers);
 
 const Dashboard = () => {
-  const { user, logout } = useAuth();
   const [datasets, setDatasets] = useState([]);
   const [selectedDataset, setSelectedDataset] = useState(null);
   const [datasetDetail, setDatasetDetail] = useState(null);
@@ -355,13 +354,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <header className="dashboard-header">
-        <h1>ChemParaViz Dashboard</h1>
-        <div className="user-info">
-          <span>Welcome, {user?.username}!</span>
-          <button onClick={logout} className="btn-logout">Logout</button>
-        </div>
-      </header>
+      <Header showDashboardTitle={true} />
 
       <div className="dashboard-content">
         <aside className="sidebar">

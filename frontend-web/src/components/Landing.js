@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import Header from './Header';
 import './Landing.css';
 
 const Landing = () => {
@@ -15,6 +16,7 @@ const Landing = () => {
 
   return (
     <div className="landing-container">
+      <Header />
       <div className="landing-content">
         <div className="landing-left">
           <h1 className="landing-title">

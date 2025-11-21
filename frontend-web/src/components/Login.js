@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
 import './Auth.css';
 
 const Login = () => {
@@ -35,7 +36,9 @@ const Login = () => {
   };
 
   return (
-    <div className="auth-container">
+    <>
+      <Header />
+      <div className="auth-container">
       <div className="auth-card">
         <h1>{isRegister ? 'Create Account' : 'Welcome Back'}</h1>
         <h2>ChemParaViz - Chemical Equipment Analytics</h2>
@@ -90,6 +93,7 @@ const Login = () => {
         </p>
       </div>
     </div>
+    </>
   );
 };
 
