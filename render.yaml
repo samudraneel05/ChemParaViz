@@ -1,0 +1,34 @@
+services:
+  # Django Backend Service
+  - type: web
+    name: chemparaviz-backend
+    runtime: python
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn chemparaviz.wsgi:application"
+    healthCheckPath: /api/
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: DATABASE_URL
+        fromDatabase:
+          name: chemparaviz-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: False
+      - key: ALLOWED_HOSTS
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+
+  # PostgreSQL Database
+  - type: psd
+    name: chemparaviz-db
+    region: oregon
+    plan: free
+    databaseName: chemparaviz
+    databaseUser: chemparaviz
