@@ -45,7 +45,7 @@ const Landing = () => {
               </div>
             </div>
             <div className="preview-content">
-              <img src="/demo.png" alt="Dashboard Preview" className="preview-image" />
+              <img src={`${process.env.PUBLIC_URL}/demo.png`} alt="Dashboard Preview" className="preview-image" />
             </div>
           </div>
         </div>
