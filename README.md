@@ -74,7 +74,7 @@ ChemParaViz/
 └── README.md                  # This file
 ```
 
-## 📋 Tech Stack
+## Tech Stack
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
@@ -95,13 +95,13 @@ ChemParaViz/
 ### 1. Backend Setup (Django API)
 
 ```bash
-# Navigate to backend
-cd backend
-
 # Create and activate virtual environment
 python -m venv venv
 source venv/bin/activate          # macOS/Linux
 # or: venv\Scripts\activate       # Windows
+
+# Navigate to backend
+cd backend
 
 # Install dependencies
 pip install -r requirements.txt
@@ -180,7 +180,7 @@ Valve-1,Valve,60.0,4.1,105.0
 
 See `sample_equipment_data.csv` for a complete working example.
 
-## 🔌 API Reference
+## API Reference
 
 For complete API documentation including all endpoints, request/response examples, authentication details, and usage examples, see **[API_DOCUMENTATION.md](API_DOCUMENTATION.md)**.
 
@@ -194,7 +194,7 @@ For complete API documentation including all endpoints, request/response example
 - `DELETE /api/dataset/{id}/delete/` - Delete dataset
 - `GET /api/history/` - Get recent uploads
 
-## 🎯 Usage Guide
+## Usage Guide
 
 ### Web Application
 
@@ -293,26 +293,6 @@ Once uploaded, you'll see:
 - Ensure dataset has data (can't generate report for empty dataset)
 - Check browser's download folder permissions
 
-### Desktop Application
-```bash
-cd frontend-desktop
-# Install PyInstaller
-pip install pyinstaller
-
-# Build standalone executable
-pyinstaller --onefile --windowed --name ChemParaViz main.py
-
-# Find executable in 'dist/' folder
-```
-
-### Backend Deployment
-```bash
-# Use gunicorn for production
-pip install gunicorn
-gunicorn chemparaviz.wsgi:application --bind 0.0.0.0:8000
-
-# Or use Docker, nginx + uWSGI, etc.
-```
 
 ## Additional Documentation
 
@@ -332,4 +312,4 @@ If something isn't working:
 
 ---
 
-**Built with attention to design, functionality, and user experience** 
+**Built with attention to design, functionality, and user experience by Samudraneel** 
